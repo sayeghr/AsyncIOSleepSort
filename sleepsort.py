@@ -1,8 +1,10 @@
 import asyncio
 
+
 async def pause_then_print(integer):
     await asyncio.sleep(integer)
     print(integer)
+
 
 async def sleepsort(integers):
     await asyncio.gather(*[pause_then_print(integer) for integer in integers])
